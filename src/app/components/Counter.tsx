@@ -2,19 +2,18 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
-import Link from "next/link";
-
+import Image from "next/image";
 interface Count_Array {
   number: number;
   text: string;
+  link: string;
 }
 
 const Count: Count_Array[] = [
-  { number: 2245341, text: "Members" },
-  { number: 46328, text: "Clubs" },
-  { number: 828867, text: "Event Bookings" },
-  { number: 1926436, text: "Event Bookings" },
+  { number: 2245341, text: "Members", link: "/img/icon/5.png" },
+  { number: 46328, text: "Clubs", link: "/img/icon/6.png" },
+  { number: 828867, text: "Event Bookings", link: "/img/icon/7.png" },
+  { number: 1926436, text: "Event Bookings", link: "/img/icon/8.png" },
   // Add more fun facts if needed
 ];
 
@@ -22,18 +21,23 @@ const Counter: React.FC = () => {
   return (
     <>
       <div className="grid grid-cols-2 ">
-        {Count.map((fact, index) => (
-          <div className="col-sm-6 col-lg-4 col-xl-2" key={index}>
-            <div className="funfact_one text-center">
-              <div className="details">
-                <ul className="ps-0 mb-0">
-                  <li>
-                    <div className="timer">
-                      <CounterWithAnimation end={fact.number} />
-                    </div>
-                  </li>
-                </ul>
-                <p className="text mb-0">{fact.text}</p>
+        {Count.map((c, index) => (
+          <div className="" key={index}>
+            <div className="flex ">
+              <div>
+                <Image
+                  width={190}
+                  height={60}
+                  className="mt-4 h-12 w-12 p-2"
+                  src={c.link}
+                  alt="Header Logo"
+                />
+              </div>
+              <div className="p-4">
+                <div className="text-xl font-bold">
+                  <CounterWithAnimation end={c.number} />
+                </div>
+                <p className="">{c.text}</p>
               </div>
             </div>
           </div>
@@ -76,16 +80,6 @@ const CounterWithAnimation: React.FC<CounterWithAnimationProps> = ({ end }) => {
       }
     };
   }, []);
-
-  //   const formatNumber = (value: number): string => {
-  //     if (value >= 1000) {
-  //       return `${Math.floor(value / 1000)}k+`;
-  //     } else if (value === 400) {
-  //       return `${value}`;
-  //     } else {
-  //       return `${value}+`;
-  //     }
-  //   };
 
   return (
     <span ref={countRef}>

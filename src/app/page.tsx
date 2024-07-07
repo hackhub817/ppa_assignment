@@ -8,8 +8,28 @@ import Dashboard from "./components/Counter";
 import Counter from "./components/Counter";
 import Business from "./components/Bussiness";
 import { FaBeer, FaCoffee, FaApple, FaAndroid } from "react-icons/fa"; // Example icons
+import Customers from "./components/Customers";
+import Marketing from "./components/Marketing";
+import Cta from "./components/Cta";
+import Footer from "./components/Footer";
+import MobileNavbar from "./components/MobileView";
 
 export default function Home() {
+  const images = [
+    {
+      image: "/img/bussiness/1.png",
+      des: "Creating Streamlined Safeguarding Processes with OneRen",
+    },
+    {
+      image: "/img/bussiness/2.png",
+      des: "What are your safeguarding responsibilities and how can you manage them?",
+    },
+    {
+      image: "/img/bussiness/3.png",
+      des: "Revamping the Membership Model with Triathlon Australia",
+    },
+  ];
+
   const sectionProps = {
     title: "The unseen of spending three years at Pixelgrade",
     description:
@@ -24,7 +44,12 @@ export default function Home() {
   };
   return (
     <>
-      <Navbar />
+      <div className="hidden lg:block">
+        <Navbar />
+      </div>
+      <div className="block lg:hidden">
+        <MobileNavbar />
+      </div>
       <Hero />
       <Client />
       <Community />
@@ -35,6 +60,12 @@ export default function Home() {
       <div className="p-4">
         <Section {...sectionProps2} />
       </div>
+      <Customers />
+      <div className="p-4">
+        <Marketing images={images} />
+      </div>
+      <Cta />
+      <Footer />
     </>
   );
 }

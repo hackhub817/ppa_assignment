@@ -2,7 +2,6 @@
 import React, { type FC } from "react";
 import Image from "next/image";
 import Marquee from "react-marquee-slider";
-
 import ClientData from "../data/ClientData";
 
 const Client: FC = () => {

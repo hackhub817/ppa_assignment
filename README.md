@@ -1,17 +1,25 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+First download the code or clone the website:
+And then:
+To setup the template and start installing project dependencies, run:
+
+<<<<<<< HEAD
+
+=======
+npm install:
 
 
+Note: This will install depenencies form all packages that matches with pnpm-workspace.yaml. If you need to clear all
+First, run the development server:
+>>>>>>> 40a8107abb54fc96023d956636dc41e8952cec58
+
+After that, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

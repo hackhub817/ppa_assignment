@@ -13,6 +13,7 @@ import Marketing from "./components/Marketing";
 import Cta from "./components/Cta";
 import Footer from "./components/Footer";
 import MobileNavbar from "./components/MobileView";
+import Market from "./components/Market";
 
 export default function Home() {
   const images = [
@@ -61,8 +62,11 @@ export default function Home() {
         <Section {...sectionProps2} />
       </div>
       <Customers />
-      <div className="p-4">
+      <div className="p-4 lg:hidden block">
         <Marketing images={images} />
+      </div>
+      <div className="hidden lg:block">
+        <Market images={images} />
       </div>
       <Cta />
       <Footer />

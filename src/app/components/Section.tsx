@@ -9,21 +9,23 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ title, description, imageLink }) => {
   return (
-    <div className="mx-auto w-[1280px] max-w-full px-4">
-      <div className="flex flex-row items-center items-start bg-white shadow-md rounded-lg overflow-hidden">
-        <div className="w-1/2">
+    <div className="mx-auto w-full max-w-7xl px-4">
+      <div className="flex flex-col lg:flex-row items-center bg-white shadow-md rounded-lg overflow-hidden">
+        <div className="w-full lg:w-1/2">
           <Image
-            width={395}
-            height={412}
+            width={442}
+            height={433}
             src={imageLink}
             alt={title}
-            className="w-[442px] h-[433px] object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
-        <div className="p-6 w-1/2">
-          <h2 className="text-3xl font-bold mb-2">{title}</h2>
-          <p className="text-gray-700 text-base mb-4">{description}</p>
-          <button className="px-4 h-auto w-auto subpixel-antialiased text-lg py-2 text-white bg-green border rounded-md transition">
+        <div className="p-6 w-full lg:w-1/2">
+          <h2 className="text-2xl lg:text-3xl font-bold mb-2">{title}</h2>
+          <p className="text-gray-700 text-base lg:text-lg mb-4">
+            {description}
+          </p>
+          <button className="px-4 py-2 text-lg text-white bg-green-500 hover:bg-green-600 border rounded-md transition">
             Learn More
           </button>
         </div>

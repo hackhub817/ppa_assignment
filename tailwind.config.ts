@@ -18,7 +18,7 @@ const config: Config = {
       screens: {
         xs: { max: "639px" },
         sm: "640px",
-        ssm: "425px",
+        ssm: { max: "425px" },
         md: { max: "768px" },
         lg: "1025px",
         xl: "1280px",

@@ -30,7 +30,7 @@ const Community: FC = () => {
         Manage your entire community in a <br /> single system
       </h1>
       <p className="text-center text-lg py-4">Who is Nextcent suitable for?</p>
-      <div className="flex justify-between p-8 ">
+      <div className="flex flex-wrap justify-between p-8 ">
         {sections.map((section, index) => (
           <Card
             key={index}

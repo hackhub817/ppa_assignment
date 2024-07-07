@@ -9,9 +9,9 @@ const Footer = () => {
     <section className="relative  bg-darkblack  p-8">
       <div className=" ">
         <div className="mx-auto w-full max-w-7xl px-4">
-          <div className="gap-8 sm-grid-cols-2 mt-6 flex flex grid w-full flex-wrap   text-sm  md:grid-cols-2 lg:mt-0 lg:grid-cols-4  xs:grid-cols-1 ">
+          <div className="gap-8 sm-grid-cols-2 mt-6 flex flex xs:grid w-full flex-wrap   text-sm  md:grid-cols-2 lg:mt-0 lg:grid-cols-4  xs:grid-cols-1 ">
             <div>
-              <div className=" ltablet:gap-12  ltablet:mr-10 xs:flex xs:items-center xs:justify-center ltablet:flex ltablet:items-center ltablet:justify-center">
+              <div className=" xs:grid sx:grid-cols-1 ltablet:gap-12  ltablet:mr-10 xs:flex xs:items-center xs:justify-center ltablet:flex ltablet:items-center ltablet:justify-center">
                 <Link
                   className="relative flex flex-shrink-0 flex-grow-0 items-center rounded-[.65rem]  py-2 no-underline transition-all duration-300"
                   href="/"
@@ -28,7 +28,7 @@ const Footer = () => {
                   Copyright © 2020 Nexcent ltd. <br />
                   All rights reserved
                 </div>
-                <div className="mt-4 flex items-center  lg:mt-0 xs:justify-center ltablet:justify-center">
+                <div className="mt-4  items-center  lg:mt-0  ltablet:justify-center">
                   <div>
                     <SocialIcons />
                   </div>
